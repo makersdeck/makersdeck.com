@@ -10,17 +10,30 @@ read -p "Show diff? (y/n) " diff
     git diff
   fi
 echo ""
-read -p "commit? (y/n) " publish
-if [ "$publish" == "y" ]; then
+read -p "commit? (y/n) " commit
+if [ "$commit" == "y" ]; then
   echo ""
   read -p "commit message: " commitmessage
   echo ""
   git add -A #assuming your .gitignore is configured
   git commit -m "$commitmessage"
+  read -p "push? (y/n) " push
+  if [ "$push" == "y" ]; then
+    echo ""
+    git push origin #assuming you have pushed your branch to orign
+    echo ""
+  else
+    echo ""
+    echo "comitted, not pushed."
+    echo ""
+  fi
+
 else
   echo "Not committed."
   echo ""
 fi
+
+
 
 
 echo ""
@@ -56,9 +69,9 @@ if [ "$build" == "y" ]; then
       git push origin #assuming you have pushed your branch to orign
       echo ""
     else
-    echo ""
-    echo "built and comitted, not pushed."
-    echo ""
+      echo ""
+      echo "built and comitted, not pushed."
+      echo ""
     fi
   else
     echo ""
