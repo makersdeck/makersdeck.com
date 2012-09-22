@@ -1,0 +1,12 @@
+
+
+// keep in mind: image sizes are "up to", corresponding to the "above()"-mixin. so for small we need "up to 800px" so the the small image is 800 wide.
+
+@each $image in card-fan, the-cards, many-packs
+  .#{$image}
+    background-size: cover
+    background-image: url('/content/images/#{$image}-small.jpg')
+    // +above($break-medium)
+    //   background-image: url('/content/images/#{$image}-medium.jpg')
+    // +above($break-medium)
+    //   background-image: url('/content/images/#{$image}-large.jpg')

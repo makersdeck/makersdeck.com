@@ -1,0 +1,78 @@
+
+html
+// setting 1rem = 10px
+  font-size: 62.5%
+  height: 100%
+
+
+body
+  width: 100%
+  max-width: 700px
+  +above($break-medium)
+    max-width: 1100px
+  +above($break-large)
+    width: 1200px
+  margin: auto
+
+
+nav
+  position: fixed
+  top: 0
+  // left: 0 
+  background-color: red
+  color: white
+  width: 100%
+  ul
+    @media screen and (max-width: $break-medium)
+      padding: 1rem
+    li
+      // list-style: none
+      display: inline
+
+  #logo
+    width: 50px
+    float: right
+
+#stage
+  margin-bottom: $line-height
+
+
+#main-headline
+
+
+
+// TYPOGRAPHY BASICS
+
+  // enable ligatures and kerning
+  text-rendering: optimizeLegibility
+  // remember there is body text-rendering: optimizeSpeed (eg mobile)
+
+
+h1, h2, h3, h4, h5, h6, strong
+  font-family: $bold
+em, blockquote
+  font-family: $italic
+
+p, ul, ol, li, table, h1, h2, h3, h4, h5, h6, blockquote, img, iframe, embed, object
+  margin-bottom: $line-height
+  line-height: $line-height
+  // &:last-child
+  //   margin-bottom: 0
+
+.spacer
+  margin-bottom: 0
+
+
+
+
+
+// RESPONSIVENESS HELPERS
+// not done, WIP!
+
+.small-only
+  +above($break-medium)
+    display: none
+  +above($break-large)
+    display: none
+.medium-only
+.large-only

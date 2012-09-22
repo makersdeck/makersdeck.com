@@ -1,0 +1,76 @@
+
+#stage
+  %img.spacer#stageimage{ :src => '/assets/media/scope.png'}
+  / = image_tag '/assets/media/16-9.png'
+  %p#stagetext
+    = link_to 'Mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+    %br
+    %br
+    = link_to 'Twitter', 'http://twitter.com/makersdeck', :class => 'button big'
+
+#main-headline
+  %h1
+    The Maker's Deck
+
+
+- images = ["card-fan", "the-cards", "many-packs"]
+
+.chunk
+  .visual
+    = link_to '/content/images/'+images[0]+'-medium.jpg', :class => 'fancybox' do
+      = image_tag '/assets/media/16-9.png',  :class => images[0]
+  .text
+    %h2 What is this?
+    %p
+      The Maker's Deck is a set of collectible trading cards.
+    %p
+      I love trading cards, but am neither interested in sports or fantasy games. So made the cards I would want to buy.
+
+.chunk
+  .visual
+    = link_to '/content/images/'+images[1]+'-medium.jpg', :class => 'fancybox' do
+      = image_tag '/assets/media/16-9.png',  :class => images[1]
+  .text
+    %h2 Can I get some?
+    %p
+      They will soon available Etsy. I am also preparing a Kickstarter-campaign. Get notice when whose things happen:
+      %br
+      %br
+      = link_to 'Follow us on twitter', 'http://twitter.com/makersdeck', :class => 'button big'
+      %br
+      or 
+      %br
+      = link_to 'Join the mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+
+    / %p.mobilebuttons
+    /   = link_to 'Mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+    /   = link_to 'Twitter', 'http://twitter.com/makersdeck', :class => 'button big'
+
+.chunk
+  .visual
+    = link_to '/content/images/'+images[2]+'-medium.jpg', :class => 'fancybox' do
+      = image_tag '/assets/media/16-9.png',  :class => images[2]
+  .text
+    %h2 Will this be open source?
+    %p
+      Yes. Besides releasing all files and artwork I will also share the process of how to make cards yourself.
+    %p
+      The plan is also to build a webapp to generate cards, make printable sheets and find other people in real life to trade cards with.
+    %p
+      Cheers,
+      %br
+      %a filtercake (fabian at makersdeck.com)
+
+
+/ %header
+/   %nav
+/     %ul
+/       %li
+/         %a{ :href => '#one'} one
+/       %li
+/         %a{ :href => '#two'} two
+/       %li
+/         %a{ :href => '#three'} three
+/       %li
+/         %a{ :href => '#four'} four
+/       %img#logo{ :src => 'content/stage-images/littlesmoere.jpg'}
