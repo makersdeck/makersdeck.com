@@ -5,6 +5,11 @@ echo "Source changes:"
 
 git s #assuming you have a got a git alias configured
 echo ""
+read -p "Show diff? (y/n) " diff
+  if [ "$diff" == "y" ]; then
+    git diff
+  fi
+echo ""
 read -p "commit? (y/n) " publish
 if [ "$publish" == "y" ]; then
   echo ""
@@ -13,7 +18,8 @@ if [ "$publish" == "y" ]; then
   git add -A #assuming your .gitignore is configured
   git commit -m "$commitmessage"
 else
-  echo "Not committed changes to source."
+  echo "Not committed."
+  echo ""
 fi
 
 
@@ -34,7 +40,6 @@ if [ "$build" == "y" ]; then
   read -p "Show diff? (y/n) " diff
   if [ "$diff" == "y" ]; then
     git diff
-  else
   fi
   echo ""
   read -p "commit? (y/n) " commit
