@@ -4,5 +4,38 @@
   %body{:class => page_classes}
     .content
       = yield
+
+    .clear
+    %footer
+      %p
+        Created by 
+        = link_to 'filtercake', 'http://filtercake.com/'
+        \. Powered by
+        = link_to 'Github pages', 'http://pages.github.com/'
+        , 
+        = link_to 'Middleman', 'http://middlemanapp.com/'
+        , 
+        = link_to 'Compass', 'http://compass-style.org/'
+        , 
+        = link_to 'HAML', 'http://haml.info/'
+        \ and 
+        = link_to 'SASS', 'http://sass-lang.com/'
+        \.
+
+
+
+    / %header
+    /   %nav
+    /     %ul
+    /       %li
+    /         %a{ :href => '#one'} one
+    /       %li
+    /         %a{ :href => '#two'} two
+    /       %li
+    /         %a{ :href => '#three'} three
+    /       %li
+    /         %a{ :href => '#four'} four
+    /       %img#logo{ :src => 'content/stage-images/littlesmoere.jpg'}
+
   
   = partial 'partials/script-embed'

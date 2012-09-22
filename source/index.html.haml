@@ -1,3 +1,7 @@
+- images = ["card-fan", "the-cards", "many-packs"]
+
+
+
 
 #stage
   %img.spacer#stageimage{ :src => '/assets/media/scope.png'}
@@ -12,9 +16,6 @@
   %h1
     The Maker's Deck
 
-
-- images = ["card-fan", "the-cards", "many-packs"]
-
 .chunk
   .visual
     = link_to '/content/images/'+images[0]+'-medium.jpg', :class => 'fancybox' do
@@ -24,16 +25,16 @@
     %p
       The Maker's Deck is a set of collectible trading cards.
     %p
-      I love trading cards, but am neither interested in sports or fantasy games. So made the cards I would want to buy.
+      I love trading cards, but am neither interested in sports or fantasy games. So I made the cards I would want to buy.
 
 .chunk
   .visual
     = link_to '/content/images/'+images[1]+'-medium.jpg', :class => 'fancybox' do
       = image_tag '/assets/media/16-9.png',  :class => images[1]
   .text
-    %h2 Can I get some?
+    %h2 Where can I get them?
     %p
-      They will soon available Etsy. I am also preparing a Kickstarter-campaign. Get notice when whose things happen:
+      They will soon be available on Etsy. I am also preparing a Kickstarter-campaign. Get noticed when those things happen:
       %br
       %br
       = link_to 'Follow us on twitter', 'http://twitter.com/makersdeck', :class => 'button big'
@@ -63,16 +64,3 @@
       %br
       %a filtercake (fabian at makersdeck.com)
 
-
-/ %header
-/   %nav
-/     %ul
-/       %li
-/         %a{ :href => '#one'} one
-/       %li
-/         %a{ :href => '#two'} two
-/       %li
-/         %a{ :href => '#three'} three
-/       %li
-/         %a{ :href => '#four'} four
-/       %img#logo{ :src => 'content/stage-images/littlesmoere.jpg'}
