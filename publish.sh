@@ -31,6 +31,12 @@ if [ "$build" == "y" ]; then
   echo "Build changes:"
   git s
   echo ""
+  read -p "Show diff? (y/n) " diff
+  if [ "$diff" == "y" ]; then
+    git diff
+  else
+  fi
+  echo ""
   read -p "commit? (y/n) " commit
   if [ "$commit" == "y" ]; then
     echo ""
