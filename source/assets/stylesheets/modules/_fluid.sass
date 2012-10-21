@@ -1,5 +1,14 @@
 body
   padding: 1em
 
-img, div, p
-  width: 100%
+.chunk, #stage
+  img, div, p
+    width: 100%
+
+#gallery
+  img
+    width: 49%
+    +above($break-medium)
+      width: 33%
+    +above($break-large)
+      width: 24.6%

@@ -1,47 +1,34 @@
 - images = ["card-fan", "the-cards", "many-packs"]
 
 
-
-
-#stage
-  %img.spacer#stageimage{ :src => '/assets/media/scope.png'}
-  / = image_tag '/assets/media/16-9.png'
-  %p#stagetext
-    = link_to 'Mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
-    %br
-    %br
-    = link_to 'Twitter', 'http://twitter.com/makersdeck', :class => 'button big'
-
-#main-headline
-  %h1
-    The Maker's Deck
-
 .chunk
   .visual
-    = link_to '/content/images/'+images[0]+'-medium.jpg', :class => 'fancybox' do
-      = image_tag '/assets/media/16-9.png',  :class => images[0]
+    = image_tag 'card-fan.jpg'
+    / = link_to '/content/images/'+images[0]+'-medium.jpg', :class => 'fancybox' do
+    /   = image_tag '/assets/media/16-9.png',  :class => images[0]
   .text
     %h2 What is this?
-    %p
-      The Maker's Deck is a set of collectible trading cards.
-    %p
-      I love trading cards, but am neither interested in sports or fantasy games. So I made the cards I would want to buy.
+    = partial '/content/what'
 
 .chunk
   .visual
-    = link_to '/content/images/'+images[1]+'-medium.jpg', :class => 'fancybox' do
-      = image_tag '/assets/media/16-9.png',  :class => images[1]
+    = image_tag 'cards.jpg'
+    / = link_to '/content/images/'+images[1]+'-medium.jpg', :class => 'fancybox' do
+    /   = image_tag '/assets/media/16-9.png',  :class => images[1]
   .text
     %h2 Where can I get them?
-    %p
-      They will soon be available on Etsy. I am also preparing a Kickstarter-campaign. Get noticed when those things happen:
-      %br
-      %br
-      = link_to 'Follow us on twitter', 'http://twitter.com/makersdeck', :class => 'button big'
-      %br
-      or 
-      %br
-      = link_to 'Join the mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+    = partial '/content/get'
+
+    = link_to 'Follow us on twitter', 'http://twitter.com/makersdeck', :class => 'button big'
+    %br
+    or 
+    %br
+    = link_to 'Join the mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+    %br
+    or 
+    %br
+    = link_to 'Check the blog', 'http://crushandcreate.tumblr.com', :class => 'button big'
+
 
     / %p.mobilebuttons
     /   = link_to 'Mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
@@ -49,18 +36,20 @@
 
 .chunk
   .visual
-    = link_to '/content/images/'+images[2]+'-medium.jpg', :class => 'fancybox' do
-      = image_tag '/assets/media/16-9.png',  :class => images[2]
+    = image_tag 'pack-wide.jpg'
+    / = link_to '/content/images/'+images[2]+'-medium.jpg', :class => 'fancybox' do
+    /   = image_tag '/assets/media/16-9.png',  :class => images[2]
   .text
     %h2 Will this be open source?
-    %p
-      Yes. Besides releasing all files and artwork
-      = link_to 'on Github', 'https://github.com/makersdeck'
-      , I will also share the process of how to make cards yourself.
-    %p
-      The plan is also to build a webapp to generate cards, make printable sheets and find other people in real life to trade cards with.
-    %p
-      Cheers,
-      %br
-      %a filtercake (fabian at makersdeck.com)
+    = partial '/content/opensource'
 
+
+.clear
+#gallery.hasTopline
+  %h2 Gallery
+  = partial '/content/gallery'
+
+.clear
+#faq.hasTopline
+  %h2 FAQ
+  = partial '/content/faq'

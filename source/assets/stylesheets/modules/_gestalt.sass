@@ -63,6 +63,8 @@ body
 
 .chunk
   width: 100%
+  overflow: hidden
+  margin-top: 2em
   +whitespace
   clear: both
   +above($break-medium)
@@ -79,7 +81,7 @@ body
     float: left
     clear: none
     margin-right: 5%
-    &:last-child
+    &:nth-child(3)
       margin-right: 0
     .visual, .text 
       width: 100%
@@ -93,6 +95,9 @@ img
   border: 2px dashed black
 
 footer
+  
+
+.hasTopline
   border-top: 2px dashed black  
 
 // h1, h2, h3, h4, h5, h6

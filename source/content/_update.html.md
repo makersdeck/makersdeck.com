@@ -1,0 +1,1 @@
+Update Oct 20: [Maker’s Deck beta soft launch at Hamburg Maker Meeting](http://crushandcreate.tumblr.com/tagged/makersdeck)

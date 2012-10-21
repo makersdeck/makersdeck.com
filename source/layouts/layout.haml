@@ -2,11 +2,27 @@
 %html
   = partial '/partials/head'  
   %body{:class => page_classes}
+
+    #stage
+      = image_tag 'stageimage.jpg', :class => 'spacer', :id => 'stageimage'
+      / %img.spacer#stageimage{ :src => '/assets/media/scope.png'}
+      / = image_tag '/assets/media/16-9.png'
+      %p#stagetext
+        = link_to 'Mailing list', 'http://eepurl.com/pMUR5', :class => 'button big'
+        %br
+        %br
+        = link_to 'Twitter', 'http://twitter.com/makersdeck', :class => 'button big'
+
+    #main-headline
+      %h1 The Maker's Deck
+      %h2 Documenting the maker scene and its projects, one card at a time.
+      = partial '/content/update'
+
     .content
       = yield
 
     .clear
-    %footer
+    %footer.hasTopline
       = partial '/partials/footer'  
 
 
