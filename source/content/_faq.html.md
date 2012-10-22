@@ -1,3 +1,8 @@
+
+### Is this a game?
+
+No. These are more in the tradition of sports trading cards. The backs of the cards feature information like website, creators, license etc.
+
 ### Where will the deck be sold?
 
 Via my etsy account and wherever I personally attend.
